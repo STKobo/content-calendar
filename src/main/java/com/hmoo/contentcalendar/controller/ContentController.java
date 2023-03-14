@@ -49,6 +49,7 @@ public class ContentController {
         if(!repository.existsById(id)){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found ! ");
         }
+        repository.save(content);
     }
 
 }
